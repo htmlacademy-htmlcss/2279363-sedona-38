@@ -8,7 +8,7 @@
 
   <body>
     <div class="page-container">
-      <header>
+      <header data-test="header">
         <nav>
           <a href="index.html"></a>
           <ul>
@@ -38,7 +38,7 @@
         </section>
       </header>
 
-      <main>
+      <main data-test="main">
         <section>
           <h1>Гостиницы Седоны</h1>
           <ul>
@@ -50,7 +50,7 @@
             </li>
           </ul>
         </section>
-        <section>
+        <section data-test="filter">
           <h2 class="visually-hidden">Параметры гостиниц с фильтрами.</h2>
           <form action="https://echo.htmlacademy.ru/" method="get">
             <div>
@@ -102,7 +102,7 @@
             <span class="visually-hidden">Показать список.</span>
           </a>
         </section>
-        <section>
+        <section data-test="catalog">
           <ul>
             <li>
               <a href="#">
@@ -185,7 +185,7 @@
             </li>
           </ul>
         </section>
-        <section>
+        <section data-test="subscribe">
           <h2>Подпишитесь на рассылку</h2>
             <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -195,6 +195,36 @@
           </form>
         </section>
       </main>
+      <footer data-test="footer">
+        <section>
+          <h2 class="visually-hidden">Социальные сети.</h2>
+          <ul>
+            <li>
+              <a class="button" href="#">
+                <span class="visually-hidden">ВКонтакте.</span>
+              </a>
+            </li>
+            <li>
+              <a class="button" href="#">
+                <span class="visually-hidden">Телеграмм.</span>
+              </a>
+            </li>
+            <li>
+              <a class="button" href="#">
+                <span class="visually-hidden">YouTube.</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="visually-hidden">Контакты.</h2>
+          <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        </section>
+        <section>
+          <h2 class="visually-hidden">Логотип html-academy.</h2>
+          <a href="https://htmlacademy.ru"></a>
+        </section>
+      </footer>
     </div>
   </body>
 </html>
