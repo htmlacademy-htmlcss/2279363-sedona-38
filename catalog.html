@@ -59,7 +59,7 @@
                 <input type="radio" name="infrastructure" value="swimming-pool" checked>Бассейн
               </label>
               <label>
-                <input type="radio" name="infrastructure" value="parking" checked>Парковка
+                <input type="radio" name="infrastructure" value="parking">Парковка
               </label>
               <label>
                 <input type="radio" name="infrastructure" value="wi-fi">Wi-Fi
@@ -85,21 +85,108 @@
           </form>
         </section>
         <section>
-          <div>
-            <p>Найдено гостиниц: <span>38</span></p>
-            <select aria-label="Сортировка">
-              <option value="popular">Сначала популярное</option>
-              <option value="expensive">Сначала дорогое</option>
-              <option value="cheap">Сначала дешёвое</option>
-              <option value="sale">По размеру скидки</option>
-            </select>
-            <a href="#">
-              <span class="visually-hidden">Показать крупные карточки.</span>
-            </a>
-            <a href="#">
-              <span class="visually-hidden">Показать карточки.</span>
-            </a>
-            <a href="#">
-              <span class="visually-hidden">Показать список.</span>
+          <p>Найдено гостиниц: <span>38</span></p>
+          <select aria-label="Сортировка">
+            <option value="popular">Сначала популярное</option>
+            <option value="expensive">Сначала дорогое</option>
+            <option value="cheap">Сначала дешёвое</option>
+            <option value="sale">По размеру скидки</option>
+          </select>
+          <a href="#">
+            <span class="visually-hidden">Показать крупные карточки.</span>
+          </a>
+          <a href="#">
+            <span class="visually-hidden">Показать карточки.</span>
+          </a>
+          <a href="#">
+            <span class="visually-hidden">Показать список.</span>
+          </a>
+        </section>
+        <section>
+          <ul>
+            <li>
+              <a href="#">
+                <img width="300" height="212" alt="Amara Resort & Spa">
+                <h3>Amara Resort & Spa</h3>
+                <p>Гостиница</p>
+                <p>От <span>4000</span> ₽</p>
+                <a href="#">Подробнее</a>
+                <button type="button">В избранное</button>
+                <span class="visually-hidden four-stars">4 звезды.</span>
+                <p>Рейтинг: <span>8,5</span></p>
               </a>
-          </div>
+            </li>
+            <li>
+              <a href="#">
+                <img width="300" height="212" alt="Villas at Poco Diablo">
+                <h3>Villas at Poco Diablo</h3>
+                <p>Гостиница</p>
+                <p>От <span>5000</span> ₽</p>
+                <a href="#">Подробнее</a>
+                <button type="button">В избранное</button>
+                <span class="visually-hidden">4 звезды.</span>
+                <p>Рейтинг: <span>9,2</span></p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img width="300" height="212" alt="Desert Quail Inn">
+                <h3>Desert Quail Inn</h3>
+                <p>Гостиница</p>
+                <p>От <span>2500</span> ₽</p>
+                <a href="#">Подробнее</a>
+                <button type="button">В избранное</button>
+                <span class="visually-hidden">3 звезды.</span>
+                <p>Рейтинг: <span>6,9</span></p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img width="300" height="212" alt="GreenTree Inn">
+                <h3>GreenTree Inn</h3>
+                <p>Гостиница</p>
+                <p>От <span>1500</span> ₽</p>
+                <a href="#">Подробнее</a>
+                <button type="button">В избранное</button>
+                <span class="visually-hidden">2 звезды.</span>
+                <p>Рейтинг: <span>5,0</span></p>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="pagination">
+          <h2 class="visually-hidden">Пагинация.</h2>
+          <ul>
+            <li>
+              <a href="#">1</a>
+            </li>
+            <li>
+              <a href="#">2</a>
+            </li>
+            <li>
+              <a href="#">3</a>
+            </li>
+            <li>
+              <a href="#">4</a>
+            </li>
+            <li>
+              <a href="#">...</a>
+            </li>
+            <li>
+              <a href="#">10</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Подпишитесь на рассылку</h2>
+            <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="visually-hidden" for="newsletter-email">Email</label>
+            <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
+            <button type="submit">Подписаться</button>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
