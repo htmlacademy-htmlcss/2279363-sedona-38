@@ -18,4 +18,76 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.page-container {
+  min-height: 100%;
+  width: 1200;
+}
+
+.hero {
+  background-color: #82B3D3;
+  background-image: url("../images/main/red-rocks.jpg");
+  background-repeat: no-repeat;
+}
+}
+
+ /*Header*/
+.navigation {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.advantages-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.list-advantages,
+.list-comfort:nth-child(2){
+  background-color: rgba(131, 179, 211, 0.20)
+}
+
+.list-advantages:nth-child(1),
+.list-advantages:nth-child(5) {
+  background-color: #82B3D3;
+  color: #FFFFFF;
+}
+
+.list-advantages:nth-child(2),
+.list-advantages:nth-child(4),
+.list-comfort {
+  background-color: rgba(131, 179, 211, 0.12)
+}
+.list-advantages,
+.list-comfort {
+  min-height: 385px;
+  width: 400px;
+}
+
+.subscribe {
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  background-image: url(../images/main/blurred-rocks.jpg);
+  background-repeat: no-repeat;
 }
