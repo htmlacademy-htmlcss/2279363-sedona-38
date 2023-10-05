@@ -55,8 +55,8 @@
         <section data-test="filter">
           <h2 class="visually-hidden">Параметры гостиниц с фильтрами.</h2>
           <form action="https://echo.htmlacademy.ru/" method="get">
-            <div>
-              <p>Инфраструктура</p>
+            <fieldset>
+              <legend>Инфраструктура</legend>
               <label>
                 <input type="checkbox" name="infrastructure" value="swimming-pool" checked>Бассейн
               </label>
@@ -66,9 +66,9 @@
               <label>
                 <input type="checkbox" name="infrastructure" value="wi-fi">Wi-Fi
                 </label>
-            </div>
-            <div>
-              <p>Тип Жилья</p>
+            </fieldset>
+            <fieldset>
+              <legent>Тип Жилья</legend>
               <label>
                 <input type="radio" name="type-of-housing" value="hotel" checked>Гостиница
               </label>
@@ -78,8 +78,14 @@
               <label>
                 <input type="radio" name="type-of-housing" value="apartments">Апартаменты
               </label>
-            </div>
-            <p>Стоимость, ₽:</p>
+            </fieldset>
+            <fieldset>
+              <legend>Стоимость, ₽: </legend>
+              <label for="min-price">
+                <input type="number" name="min-price" placeholder="от" value="0" id="price" required>
+                <input type="number" name="max-price" placeholder="до" value="9000" id="price" required>
+            </label>
+            </fieldset>
             <div>
               <button class="button-on" type="submit">Применить</button>
               <button class="button-off" type="submit">Сбросить</button>
@@ -185,8 +191,8 @@
             <a href="#">10</a>
           </li>
         </ul>
-        <section >
-          <h2 data-test="subscribe">Подпишитесь на рассылку</h2>
+        <section data-test="subscribe">
+          <h2>Подпишитесь на рассылку</h2>
             <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="newsletter-email">Email</label>
