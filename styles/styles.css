@@ -152,6 +152,59 @@ body {
   text-transform: uppercase;
 }
 
+.product-list {
+  list-style-type: none;
+}
+
+.product-card {
+  width: 340px;
+  height: 438px;
+}
+
+.product-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.product-details,
+.product-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.product-info {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.pagination-list {
+  list-style-type: none;
+}
+
+.pagination-item {
+  width: 60px;
+  height: 60px;
+  background-color: #82B3D3;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.pagination-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.subscribe-get {
+  color: #FFFFFF;
+  background-color: #82B3D3;
+}
+
+
 /*Footer*/
 .contacts-phone {
   color: #000000;
