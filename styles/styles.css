@@ -266,8 +266,26 @@ body {
   text-transform: uppercase;
 }
 
+.product-details {
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  border-radius: 4px;
+  background-color: #756157;
+}
+
 .to-favorites {
   font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  border-radius: 4px;
+}
+
+.active {
+background-color: #7DB54F;
 }
 
 .pagination-list {
