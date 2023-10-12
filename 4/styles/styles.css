@@ -16,15 +16,22 @@
 
 body {
   font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000000;
-  background-color: #FFFFFF;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #333;
+  background: #F2F2F2;
 }
 
 .page-container {
   min-height: 100%;
-  width: 1200;
+  width: 1200; /*не применилось*/
+  background: #FFFFFF;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.20);
+}
+
+.visually-hidden {
+  display: none;
 }
 
  /*Header*/
@@ -36,12 +43,10 @@ body {
 }
 
 .navigation-list,
-.advantages-list {
+.advantages-list,
+.custom-menu,
+.comfort-list {
   list-style-type: none;
-
-}
-
-.navigation-item {
 
 }
 
@@ -50,11 +55,32 @@ body {
   text-decoration: none;
 }
 
+.number-off-favorites {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  color: ;
+  text-decoration: none;
+}
+
+.want-here {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #756157;
+}
+
 /*Index-main*/
 .hero {
   background-color: #82B3D3;
   background-image: url("../images/main/red-rocks.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .title {
@@ -63,11 +89,16 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   text-align: center;
+  color: #000000;
 }
 
 .subtitle {
-  font-size: 22px;
-  line-height: 26px;
+  text-align: center;
+}
+
+.advantages-list {
+  font-size: 18px;
+  line-height: 21px;
   text-align: center;
 }
 
@@ -100,11 +131,35 @@ body {
   width: 400px;
 }
 
+.comfort-list {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.search {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #FFFFFF;
+  background-color: #756157;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.title-light {
+  color: #FFFFFF;
+}
+
 .subscribe {
   color: #FFFFFF;
   background-color: #82B3D3;
   background-image: url(../images/main/blurred-rocks.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.subscribe-get {
+  font-family: inherit;
 }
 
 /*Catalog*/
@@ -113,6 +168,7 @@ body {
   background-color: #82B3D3;
   background-image: url(../images/catalog/blured-rocks-catalog.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .catalog-title {
@@ -127,8 +183,15 @@ body {
 }
 
 .breadcrumbs-link{
-  color: #000000;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-decoration: none;
+}
+
+.filter {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
 }
 
 .filter-title {
@@ -137,12 +200,28 @@ body {
   line-height: 24px;
 }
 
+.min-pice,
+.max-price {
+  font-family: inherit;
+}
+
 .button-on,
 .button-off {
+  font-family: inherit;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.button-on {
+  background-color: #82B3D3;
+  border-radius: 4px;
+}
+
+.button-off {
+  background-color: rgba(130, 179, 211, 0);
 }
 
 .searching-results{
@@ -152,11 +231,18 @@ body {
   text-transform: uppercase;
 }
 
+.dropdown {
+  font-family: inherit;
+}
+
 .product-list {
   list-style-type: none;
 }
 
 .product-card {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
   width: 340px;
   height: 438px;
 }
@@ -180,32 +266,76 @@ body {
   text-transform: uppercase;
 }
 
+.product-details {
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  border-radius: 4px;
+  background-color: #756157;
+}
+
+.to-favorites {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  border-radius: 4px;
+}
+
+.active {
+background-color: #7DB54F;
+}
+
 .pagination-list {
   list-style-type: none;
 }
 
 .pagination-item {
-  width: 60px;
-  height: 60px;
-  background-color: #82B3D3;
+
+}
+
+.pagination-link {
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+  color: #FFFFFF;
+  width: 60px;
+  height: 60px;
+  background-color: #82B3D3;
+  text-decoration: none;
+  border-radius: 4px;
 }
 
-.pagination-link {
+.pagination-link-active {
   color: #000000;
-  text-decoration: none;
+  background-color: #F2F2F2;
+}
+
+.pagination-link-more {
+  color:#000000;
+  background-color: #FFFFFF; /*в макете это поле иное по размеру, значит класс другой ставить? такой взгляд не соответствует макету?*/
+
 }
 
 .subscribe-get {
   color: #FFFFFF;
   background-color: #82B3D3;
+  font-family: inherit;
+}
+
+.subscribe-field {
+  font-family: inherit;
 }
 
 
 /*Footer*/
+.social-media {
+list-style-type: none;
+}
+
 .contacts-phone {
   color: #000000;
   text-decoration: none;
