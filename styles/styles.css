@@ -14,6 +14,10 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
@@ -21,11 +25,16 @@ body {
   line-height: 26px;
   color: #333;
   background: #F2F2F2;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .page-container {
+  width: 1200px;
+  margin: 0 auto;
   min-height: 100%;
-  width: 1200; /*не применилось*/
   background: #FFFFFF;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.20);
 }
@@ -42,11 +51,26 @@ body {
 }
 
  /*Header*/
+.header {
+  display: flex;
+}
+
 .navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   text-transform: capitalize;
+}
+
+.navigation-list {
+  display: flex;
+  margin: 0;
+  margin-left: 30px;
+  margin-right: auto;
+  padding: 0;
 }
 
 .navigation-list,
@@ -54,12 +78,20 @@ body {
 .custom-menu,
 .comfort-list {
   list-style-type: none;
+}
+.navigaton-item {
 
 }
 
 .navigation-link {
   color: #000000;
   text-decoration: none;
+  padding: 20px 16px;
+}
+
+.custom-menu {
+  display: flex;
+  margin-left: auto;
 }
 
 .number-off-favorites {
@@ -80,14 +112,32 @@ body {
   text-align: center;
   border-radius: 4px;
   background-color: #756157;
+  padding: 8px 50px;
+  margin-left: 20px;
+  align-self: center;
 }
 
 /*Index-main*/
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 1200px;
+}
+
 .hero {
   background-color: #82B3D3;
   background-image: url("../images/main/red-rocks.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.hero-text {
+  margin: 51px 371px 82px;
+}
+
+.title-block {
+  padding: 69px auto;
 }
 
 .title {
@@ -100,10 +150,14 @@ body {
 }
 
 .subtitle {
+  margin-top: 25px;
   text-align: center;
 }
 
 .advantages-list {
+  display: grid;
+  width: 1200px;
+  flex-wrap: wrap;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
@@ -339,8 +393,13 @@ background-color: #7DB54F;
 
 
 /*Footer*/
+.footer {
+  display: flex;
+  margin-bottom: 0;
+}
+
 .social-media {
-list-style-type: none;
+  list-style-type: none;
 }
 
 .contacts-phone {
