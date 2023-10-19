@@ -14,6 +14,10 @@
   font-display: swap;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -26,10 +30,7 @@ body {
   color: #333;
   background: #F2F2F2;
   margin: 0;
-  /*
-  display: flex;
-  flex-direction: column;
-  height: 100%;*/
+  height: 100%;
 }
 
 .page-container {
@@ -39,7 +40,7 @@ body {
   margin: 0 auto;
   min-height: 100%;
   background: #FFFFFF;
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.20);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
 }
 
 .visually-hidden {
@@ -62,29 +63,42 @@ body {
 
 .navigation {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   width: 1200px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   text-transform: capitalize;
 }
 
+.logo-link {
+  margin-bottom: -6px;
+  margin-right: 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+width: 100%;
+height: 100%;
+}
+
 .navigation-list {
   display: flex;
-  margin-left: 30px;
   margin-right: auto;
   padding: 0;
+  margin: 0;
+  align-items: center;
 }
 
 .navigation-list,
 .advantages-list,
-.custom-menu,
+.custom-menu-list,
 .comfort-list {
   list-style-type: none;
-}
-.navigaton-item {
-
 }
 
 .navigation-link {
@@ -93,8 +107,11 @@ body {
   padding: 20px 16px;
 }
 
-.custom-menu {
+.custom-menu-list {
   display: flex;
+  margin: 0;
+  padding: 0;
+  margin-right: 20px;
 }
 
 .custom-item {
@@ -118,9 +135,10 @@ body {
   text-align: center;
   border-radius: 4px;
   background-color: #756157;
-  padding: 8px 50px;
-  margin-left: 20px;
+  padding: 8px 14px;
+  justify-content: center;
   align-self: center;
+  align-items: center;
 }
 
 /*Index-main*/
@@ -135,15 +153,17 @@ body {
   background-image: url("../images/main/red-rocks.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 51px 0 82px;
 }
 
 .hero-text {
-  display: block;
-  margin: 51px auto 82px;;
+  display: flex;
+  margin: auto;
 }
 
 .little-town {
   padding: 69px 0;
+  margin-bottom: 21px;
 }
 
 .title {
@@ -153,7 +173,8 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #000000;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
   margin-bottom: 20px;
 }
 
@@ -162,9 +183,10 @@ body {
 }
 
 .subtitle {
-  margin-top: 25px;
+  margin-top: 25px;/*исправить!!!!!!!!!!*/
   text-align: center;
-  margin:0;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-list {
@@ -173,6 +195,8 @@ body {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-title {
@@ -181,6 +205,8 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   margin-bottom: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-item,
@@ -223,20 +249,53 @@ body {
   width: 400px;
   padding: 80px 85px;
   margin: auto;
-  box-sizing: border-box;
+}
+
+.comfort-housing::before {
+  content: "";
+  width: 75px;
+  height: 72px;
+	display: block;
+  background-image: url("../images/main/advantage-housing.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.comfort-food::before {
+  content: "";
+  width: 75px;
+  height: 72px;
+	display: block;
+  background-image: url("../images/main/advantage-food.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.comfort-souvenirs::before {
+  content: "";
+  width: 75px;
+  height: 72px;
+	display: block;
+  background-image: url("../images/main/advantage-souvenirs.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .interested {
   display: flex;
-  padding: 96px 304px;
+  padding: 96px 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.interested-text {
+  max-width: 600px;
+}
+
 .search {
   display:inline-block;
-  padding: 8px 50px;
+  padding: 8px 14px;
   margin-top: 54px;
   border-radius: 4px;
   font-size: 20px;
@@ -250,7 +309,7 @@ body {
 
 .subscribe {
   display: flex;
-  padding: 96px 258px 104px;
+  padding: 96px 0 104px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -261,9 +320,20 @@ body {
   background-size: cover;
 }
 
+.subscribe-text {
+  max-width: 500px;
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  margin-top: 54px;
+}
+
 .subscribe-field {
   padding: 12px 20px;
-  align-self: stretch; /*кривое поле*/
+  align-self: stretch;
+  height: 28px;
   border-radius: 4px 0px 0px 4px;
   border: none;
   font-family: inherit;
@@ -272,9 +342,10 @@ body {
 
 .subscribe-get {
   display: inline-flex;
-  padding: 8px 50px;
+  padding: 8px 20px;
   justify-content: center;
   align-items: center;
+  height: 28px;
   border-radius: 0px 4px 4px 0px;
   border: none;
   font-family: inherit;
@@ -318,7 +389,7 @@ body {
   margin: 8px 0 40px;
   font-size: 16px;
   line-height: 21px;
-  list-style-type: none;/*ссылка на главную не отображается, домик*/
+  list-style-type: none;
 }
 
 .breadcrumbs-link{
@@ -432,7 +503,6 @@ body {
   padding: 14px 20px;
   border: 2px solid #E5E5E5;
   font-family: inherit;
-  /*box-sizing: border-box; я полагаю, здесь он не нужен раз на макете выставлен 2???*/
 }
 
 .show {
@@ -445,7 +515,6 @@ body {
   align-items: center;
   border-radius: 4px;
   border: 2px solid #000;
-  /*box-sizing: border-box; я полагаю, здесь он не нужен раз на макете выставлен 2???*/
 }
 
 .product-list {
@@ -548,7 +617,6 @@ background-color: #7DB54F;
   background-color: #82B3D3;
   text-decoration: none;
   border-radius: 4px;
-  box-sizing: border-box;
 }
 
 .pagination-link-active {
