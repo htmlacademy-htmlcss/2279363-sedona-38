@@ -30,6 +30,7 @@ body {
   color: #333;
   background: #F2F2F2;
   margin: 0;
+  padding: 0;
   height: 100%;
 }
 
@@ -38,6 +39,7 @@ body {
   flex-direction: column;
   width: 1200px;
   margin: 0 auto;
+  padding: 0;
   min-height: 100%;
   background: #FFFFFF;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
@@ -58,6 +60,7 @@ body {
 .header {
   display: flex;
   padding: 0 70px;
+  margin: 0;
   justify-content: space-between;
 }
 
@@ -75,22 +78,25 @@ body {
 }
 
 .logo-link {
+  margin: 0;
+  padding: 0;
   margin-bottom: -6px;
   margin-right: 28px;
   position: relative;
-  z-index: 2;
 }
 
 .logo {
 width: 100%;
 height: 100%;
+margin: 0;
+padding: 0;
 }
 
 .navigation-list {
   display: flex;
-  margin-right: auto;
   padding: 0;
   margin: 0;
+  margin-right: auto;
   align-items: center;
 }
 
@@ -105,6 +111,7 @@ height: 100%;
   color: #000000;
   text-decoration: none;
   padding: 20px 16px;
+  margin: 0;
 }
 
 .custom-menu-list {
@@ -112,10 +119,11 @@ height: 100%;
   margin: 0;
   padding: 0;
   margin-right: 20px;
+  align-items: center;
 }
 
 .custom-item {
-  width: 22px;
+  min-width: 22px;
 }
 
 .number-off-favorites {
@@ -123,6 +131,8 @@ height: 100%;
   font-weight: 400;
   line-height: 10px;
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 .want-here {
@@ -136,9 +146,11 @@ height: 100%;
   border-radius: 4px;
   background-color: #756157;
   padding: 8px 14px;
+  margin: 0;
   justify-content: center;
   align-self: center;
   align-items: center;
+  min-width: 160px;
 }
 
 /*Index-main*/
@@ -190,13 +202,21 @@ height: 100%;
 }
 
 .advantages-list {
-  display: grid;
+  display: flex;
   flex-wrap: wrap;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
   margin: 0;
   padding: 0;
+}
+
+.advantages-item {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  min-height: 230px;
+  padding: 112.5 85px
 }
 
 .advantages-title {
@@ -218,6 +238,7 @@ height: 100%;
 .advantages-item:nth-child(5) {
   background-color: #82B3D3;
   color: #FFFFFF;
+  width: 100%;
 }
 
 .advantages-item:nth-child(2),
@@ -246,6 +267,8 @@ height: 100%;
 }
 
 .comfort-item {
+  display:flex;
+  flex-direction: column;
   width: 400px;
   padding: 80px 85px;
   margin: auto;
@@ -334,7 +357,7 @@ height: 100%;
   padding: 12px 20px;
   align-self: stretch;
   height: 28px;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0 0 4px;
   border: none;
   font-family: inherit;
   background-color: #F2F2F2;
@@ -346,13 +369,13 @@ height: 100%;
   justify-content: center;
   align-items: center;
   height: 28px;
-  border-radius: 0px 4px 4px 0px;
+  border-radius: 0 4px 4px 0;
   border: none;
   font-family: inherit;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
-  text-transform: uppercase; /*не дружит с полем выше*/
+  text-transform: uppercase;
   color: #FFFFFF;
   background-color: #82B3D3;
 }
