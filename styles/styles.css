@@ -1,3 +1,4 @@
+/* General */
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -16,6 +17,21 @@
 
 * {
   box-sizing: border-box;
+}
+
+/* Удалить потом */
+.perfect-pixel {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: block;
+  width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+
+  opacity: 0.3;
 }
 
 html {
@@ -56,6 +72,8 @@ body {
   overflow: hidden;
 }
 
+ /**/
+
  /*Header*/
 .header {
   display: flex;
@@ -78,6 +96,7 @@ body {
 }
 
 .logo-link {
+  display:block;
   margin: 0;
   padding: 0;
   margin-bottom: -6px;
@@ -86,6 +105,7 @@ body {
 }
 
 .logo {
+display:block;
 width: 100%;
 height: 100%;
 margin: 0;
@@ -166,6 +186,17 @@ padding: 0;
   padding: 51px 0 82px;
 }
 
+.hero::before {
+  content: "";
+  background-image: url(../images/main/ladder.svg);
+  position: absolute;
+  top: 428px;
+  width: 100%;
+  height: 57px;
+  z-index: 100;
+
+}
+
 .hero-text {
   display: flex;
   margin: auto;
@@ -200,6 +231,7 @@ padding: 0;
 
 .advantages-list {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   font-size: 18px;
   line-height: 21px;
@@ -208,12 +240,15 @@ padding: 0;
   padding: 0;
 }
 
-.advantages-item {
+.advantages-item-container {
   display: flex;
   flex-direction: column;
-  width: 230px;
-  min-height: 230px;
-  padding: 112.5 85px
+  justify-content: flex-start;
+  width: 400px;
+  min-height: 385px;
+  padding: 100px 85px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .advantages-title {
@@ -233,6 +268,8 @@ padding: 0;
 
 .advantages-item:nth-child(1),
 .advantages-item:nth-child(5) {
+  display: flex;
+  flex-direction: row;
   background-color: #82B3D3;
   color: #FFFFFF;
   width: 100%;
@@ -243,9 +280,9 @@ padding: 0;
 .comfort-item {
   background-color: rgba(131, 179, 211, 0.12);
 }
-.advantages-item,
-.comfort-item {
-  width: 400px;
+
+.img-left {
+  order: -1;
 }
 
 .comfort {
@@ -420,7 +457,7 @@ padding: 0;
 
 .breadcrumbs-link{
   color: #FFFFFF;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   text-decoration: none;
 }
 
@@ -434,6 +471,7 @@ padding: 0;
 
 .filter-title {
   margin-bottom: 32px;
+  padding: 0;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -544,27 +582,34 @@ padding: 0;
 }
 
 .product-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
   flex-wrap: wrap;
   margin: 40px 0;
   padding: 0;
+  gap: 20px;
   list-style-type: none;
 }
 
 .product-card {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: 212px 1fr;
+  gap: 16px 20px;
   padding: 20px;
-  margin-right: 20px; /*обнулить марджин у каждого третьего элемента*/
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
-  width: 340px;
-  height: 438px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
 }
 
 .product-title {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
+  margin: 0;
+  padding: 0;
 }
 
 .product-details,
@@ -574,22 +619,12 @@ padding: 0;
 }
 
 .product-link {
-  display: inline-block;
-}
+  grid-column: 1/-1;
 
-.product-type {
-  display: inline-block;
 }
 
 .product-price {
-  display: inline-block;
-}
-
-.product-info {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-  text-transform: uppercase;
+  justify-self: end;
 }
 
 .product-details {
@@ -610,6 +645,22 @@ padding: 0;
   border-radius: 4px;
 }
 
+.one-star {
+  background-image: url(../images/catalog/star.svg);
+  background-repeat: no-repeat;
+}
+
+.two-stars {
+  background-image: url(../images/catalog/star.svg);
+  background-repeat: repeat-x;
+}
+
+.rating {
+  justify-self: end;
+  border-radius: 4px;
+  background:#F2F2F2;
+}
+
 .active {
 background-color: #7DB54F;
 }
@@ -625,14 +676,12 @@ background-color: #7DB54F;
 
 .pagination-item {
   margin-right: 8px; /*убрать марджин справа последнему элементу*/
-
 }
 
 .pagination-link {
   display: flex;
   width: 60px;
   height: 60px;
-  padding: 11.5px 0 13px;
   justify-content: center;
   align-items: center;
   font-size: 20px;
