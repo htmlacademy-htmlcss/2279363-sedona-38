@@ -7,6 +7,11 @@
   </head>
 
   <body>
+    <!-- perfect-pixel start -->
+    <picture>
+      <img class="perfect-pixel" src="images/page-catalog.png"/>
+    </picture>
+    <!-- perfect-pixel end -->
     <div class="page-container">
       <header class="header" data-test="header">
         <nav class="navigation">
@@ -132,7 +137,7 @@
                 <a class="product-link">
                   <h3 class="product-title">Villas at Poco Diablo</h3>
                 </a>
-                <p>Гостиница</p>
+                <p class="product-type">Гостиница</p>
                 <p class="product-price">От <span>5000</span> ₽</p>
                 <a class="product-details" href="#">Подробнее</a>
                 <button class="to-favorites active" type="button">В избранном</button>
@@ -146,7 +151,7 @@
                 <a class="product-link">
                   <h3 class="product-title">Desert Quail Inn</h3>
                 </a>
-                <p>Гостиница</p>
+                <p class="product-type">Гостиница</p>
                 <p class="product-price">От <span>2500</span> ₽</p>
                 <a class="product-details" href="#">Подробнее</a>
                 <button class="to-favorites" type="button">В избранное</button>
@@ -160,7 +165,7 @@
                 <a class="product-link">
                   <h3 class="product-title">GreenTree Inn</h3>
                 </a>
-                <p>Гостиница</p>
+                <p class="product-type">Гостиница</p>
                 <p class="product-price">От <span>1500</span> ₽</p>
                 <a class="product-details" href="#">Подробнее</a>
                 <button class="to-favorites" type="button">В избранное</button>
@@ -192,12 +197,12 @@
           </ul>
         </div>
         <section class="subscribe-catalog" data-test="subscribe">
-          <h2 class="title titlet">Подпишитесь на рассылку</h2>
+          <h2 class="title">Подпишитесь на рассылку</h2>
           <p class="subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form action="https://echo.htmlacademy.ru/" method="post">
+          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="newsletter-email">Email</label>
-            <input class="subscribe-field subscribe-field-catalog" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
-            <button class="subscribe-get subscribe-get-catalog" type="submit">Подписаться</button>
+            <input class="subscribe-field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
+            <button class="subscribe-get" type="submit">Подписаться</button>
           </form>
         </section>
       </main>
