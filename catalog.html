@@ -7,11 +7,7 @@
   </head>
 
   <body>
-    <!-- perfect-pixel start -->
-    <picture>
-      <img class="perfect-pixel" src="images/page-catalog.png"/>
-    </picture>
-    <!-- perfect-pixel end -->
+
     <div class="page-container">
       <header class="header" data-test="header">
         <nav class="navigation">
@@ -80,11 +76,11 @@
             </fieldset>
             <fieldset class="price">
               <legend class="filter-title">Стоимость, ₽: </legend>
-              <label>
+              <label class="price-label">
                 <span class="price-from">от</span>
                 <input class="min-price" type="number" placeholder="0" name="min-price" value="0" required>
               </label>
-              <label>
+              <label class="price-label">
                 <span class="price-up-to">до</span>
                 <input class="max-price" type="number" placeholder="9000" name="max-price" value="9000" required>
               </label>
@@ -104,15 +100,17 @@
               <option value="cheap">Сначала дешёвое</option>
               <option value="sale">По размеру скидки</option>
             </select>
-            <a class="show" href="#">
-              <span class="visually-hidden">Показать крупные карточки.</span>
-            </a>
-            <a class="show" href="#">
-              <span class="visually-hidden">Показать карточки.</span>
-            </a>
-            <a class="show" href="#">
-              <span class="visually-hidden">Показать список.</span>
-            </a>
+            <div class="show">
+              <a class="show-button show-tiles" href="#">
+                <span class="visually-hidden">Показать карточки.</span>
+              </a>
+              <a class="show-button show-tiles-big" href="#">
+                <span class="visually-hidden">Показать крупные карточки.</span>
+              </a>
+              <a class="show-button show-list" href="#">
+                <span class="visually-hidden">Показать список.</span>
+              </a>
+            </div>
           </section>
           <section data-test="catalog">
             <ul class="product-list">
@@ -127,7 +125,9 @@
                 <p class="product-price">От <span>4000</span> ₽</p>
                 <a class="product-details" href="#">Подробнее</a>
                 <button class="to-favorites" type="button">В избранное</button>
-                <span class="visually-hidden four-stars">4 звезды.</span>
+                <div class="four-stars">
+                  <span class="visually-hidden">4 звезды.</span>
+                </div>
                 <p class="rating">Рейтинг: <span>8,5</span></p>
               </li>
               <li class="product-card">
@@ -141,7 +141,9 @@
                 <p class="product-price">От <span>5000</span> ₽</p>
                 <a class="product-details" href="#">Подробнее</a>
                 <button class="to-favorites active" type="button">В избранном</button>
-                <span class="visually-hidden four-stars">4 звезды.</span>
+                <div class="four-stars">
+                  <span class="visually-hidden">4 звезды.</span>
+                </div>
                 <p class="rating">Рейтинг: <span>9,2</span></p>
               </li>
               <li class="product-card">
@@ -155,7 +157,9 @@
                 <p class="product-price">От <span>2500</span> ₽</p>
                 <a class="product-details" href="#">Подробнее</a>
                 <button class="to-favorites" type="button">В избранное</button>
-                <span class="visually-hidden three-stars">3 звезды.</span>
+                <div class="three-stars">
+                  <span class="visually-hidden">3 звезды.</span>
+                </div>
                 <p class="rating">Рейтинг: <span>6,9</span></p>
               </li>
               <li class="product-card">
@@ -169,7 +173,9 @@
                 <p class="product-price">От <span>1500</span> ₽</p>
                 <a class="product-details" href="#">Подробнее</a>
                 <button class="to-favorites" type="button">В избранное</button>
-                <span class="visually-hidden two-stars">2 звезды.</span>
+                <div class="two-stars">
+                  <span class="visually-hidden">2 звезды.</span>
+                </div>
                 <p class="rating">Рейтинг: <span>5,0</span></p>
               </li>
             </ul>
