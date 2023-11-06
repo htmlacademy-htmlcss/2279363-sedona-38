@@ -55,27 +55,30 @@
           <h2 class="visually-hidden">Параметры гостиниц с фильтрами.</h2>
           <form class="filter" data-test="filter" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="infrastructure">
-              <legend class="filter-title">Инфраструктура</legend>
-              <label>
-                <input type="checkbox" name="infrastructure" value="swimming-pool" checked>Бассейн
+              <legend class="filter-title">Инфраструктура:</legend>
+              <label class="infrastructure-option">
+                <input class="infrastructure-input" type="checkbox" name="infrastructure" value="swimming-pool" checked>
+                <span>Бассейн</span>
               </label>
-              <label>
-                <input type="checkbox" name="infrastructure" value="parking" checked>Парковка
+              <label class="infrastructure-option">
+                <input class="infrastructure-input" type="checkbox" name="infrastructure" value="parking" checked>
+                <span>Парковка</span>
               </label>
-              <label>
-                <input type="checkbox" name="infrastructure" value="wi-fi">Wi-Fi
+              <label class="infrastructure-option">
+                <input class="infrastructure-input" type="checkbox" name="infrastructure" value="wi-fi">
+                <span>Wi-Fi</span>
                 </label>
             </fieldset>
             <fieldset class="type-of-housing">
-              <legend class="filter-title">Тип Жилья</legend>
-              <label>
-                <input type="radio" name="type-of-housing" value="hotel" checked>Гостиница
+              <legend class="filter-title">Тип Жилья:</legend>
+              <label class="housing-option">
+                <input class="housing-input" type="radio" name="type-of-housing" value="hotel" checked>Гостиница
               </label>
-              <label>
-                <input type="radio" name="type-of-housing" value="motel">Мотель
+              <label  class="housing-option">
+                <input class="housing-input" type="radio" name="type-of-housing" value="motel">Мотель
               </label>
-              <label>
-                <input type="radio" name="type-of-housing" value="apartments">Апартаменты
+              <label  class="housing-option">
+                <input class="housing-input" type="radio" name="type-of-housing" value="apartments">Апартаменты
               </label>
             </fieldset>
             <fieldset class="price">
