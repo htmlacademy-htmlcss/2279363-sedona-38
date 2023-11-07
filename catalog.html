@@ -7,11 +7,7 @@
   </head>
 
   <body>
-    <!-- perfect-pixel start -->
-    <picture>
-      <img class="perfect-pixel" src="images/page-catalog.png"/>
-    </picture>
-    <!-- perfect-pixel end -->
+
     <div class="page-container">
       <header class="header" data-test="header">
         <nav class="navigation">
@@ -35,7 +31,7 @@
             <a href="#"><span class="visually-hidden">Поиск.</span></a>
           </li>
           <li class="custom-item">
-            <a class="number-off-favorites" href="#"><span class="visually-hidden">Избранное.</span><span>12</span></a>
+            <a class="custom-favorites" href="#"><span class="visually-hidden">Избранное.</span><span class="number-favorites">12</span></a>
           </li>
         </ul>
         <a class="want-here" href="#">Хочу сюда!</a>
@@ -91,6 +87,8 @@
                 <span class="price-up-to">до</span>
                 <input class="max-price" type="number" placeholder="9000" name="max-price" value="9000" required>
               </label>
+              <div class="price-slider"></div>
+              <div class="price-slider-moving"></div>
             </fieldset>
             <div class="filter-button">
               <button class="button-on" type="submit">Применить</button>
@@ -219,8 +217,8 @@
           </ul>
         </div>
         <section class="subscribe-catalog" data-test="subscribe">
-          <h2 class="title">Подпишитесь на рассылку</h2>
-          <p class="subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <h2 class="title title-inner">Подпишитесь на рассылку</h2>
+          <p class="subtitle">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="newsletter-email">Email</label>
             <input class="subscribe-field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>

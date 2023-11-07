@@ -168,18 +168,42 @@ img {
   padding: 0;
 }
 
-.custom-item {
-  min-width: 22px;
+.custom-search {
+  display: block;
+  margin: 0;
+  padding: 22px 12px;
+  background-image: url(../images/header/search.svg);
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.number-off-favorites {
+.custom-favorites {
+  display: block;
   margin: 0;
-  padding: 0;
+  padding: 22px 12px;
 
+  text-decoration: none;
+  background-image: url(../images/header/favorites.svg);
+  background-size: 18px 17px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.number-of-favorites {
   font-weight: 400;
   font-size: 10px;
   line-height: 10px;
-  text-decoration: none;
+  background-color: #7DB54F;
+  border-radius: 50%;
+  background-size: 20px;
+  position: absolute;
+  left: 5px;
+  top: -2px;
+  text-align: center;
+  color: #ffffff;
+  padding: 5px 4px;
 }
 
 .want-here {
@@ -200,6 +224,14 @@ img {
   border-radius: 4px;
 }
 
+.want-here:hover {
+  background-color: #615048;
+}
+
+.want-here:focus {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 /*Index-main*/
 .main {
   display: flex;
@@ -213,7 +245,7 @@ img {
   padding: 51px 0 82px;
 
   background-color: rgba(131, 179, 211, 0.50);
-  background-image: url("../images/main/red-rocks.jpg");
+  background-image: url(../images/main/red-rocks.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -227,7 +259,7 @@ img {
   width: 100%;
   height: 57px;
 
-  background-image: url("../images/main/ladder.svg");
+  background-image: url(../images/main/ladder.svg);
   background-repeat: no-repeat;
 }
 
@@ -279,7 +311,8 @@ img {
   text-align: center;
 }
 
-.advantages-item-container {
+.advantages-item-container,
+.advantages-item-container-light {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -291,12 +324,16 @@ img {
   gap: 30px;
 }
 
-.advantages-item-container::before {
+.advantages-item-container::before,
+.advantages-item-container-light::before {
   content:"";
-  background-color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.3);
   width: 60px;
   height: 2px;
+}
 
+.advantages-item-container-light::before {
+  background-color: #ffffff;
 }
 
 
@@ -310,8 +347,7 @@ img {
   text-transform: uppercase;
 }
 
-.advantages-item,
-.comfort-food {
+.advantages-item {
   background-color: rgba(131, 179, 211, 0.20);
 }
 
@@ -328,7 +364,7 @@ img {
 
 .advantages-item:nth-child(2),
 .advantages-item:nth-child(4),
-.comfort-item {
+.comfort-item:not(.comfort-food){
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -378,6 +414,7 @@ img {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -389,7 +426,7 @@ img {
   height: 72px;
   margin-bottom: 30px;
 
-  background-image: url("../images/main/advantage-housing.svg");
+  background-image: url(../images/main/advantage-housing.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -402,7 +439,7 @@ img {
   height: 72px;
   margin-bottom: 30px;
 
-  background-image: url("../images/main/advantage-food.svg");
+  background-image: url(../images/main/advantage-food.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -415,7 +452,7 @@ img {
   height: 72px;
   margin-bottom: 30px;
 
-  background-image: url("../images/main/advantage-souvenirs.svg");
+  background-image: url(../images/main/advantage-souvenirs.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -480,6 +517,9 @@ img {
   padding: 12px 20px;
 
   font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.6);
 
   background-color: #f2f2f2;
   border: none;
@@ -578,7 +618,7 @@ img {
 }
 
 .infrastructure-input:checked {
-  background-image: url("/images/catalog/check-mark.svg");
+  background-image: url(../images/catalog/check-mark.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -679,6 +719,20 @@ img {
   border-radius: 0 4px 4px 0;
 }
 
+.price-slider {
+  display: block;
+  background-color: rgba(225, 225, 225, 0.3);
+  background-size: 287px 4px;
+  background-position: center;
+}
+
+.price-slider-moving {
+  display: block;
+  background-color: #ffffff;
+  background-size: 228px 4px;
+  background-position: center;
+}
+
 .filter-button {
   display: flex;
   flex-direction: column;
@@ -704,11 +758,27 @@ img {
 
   background-color: #82b3d3;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-on:hover {
+  background-color: #68A2CA;
 }
 
 .button-off {
   background-color: rgba(130, 179, 211, 0);
+  border-radius: 4px;
+  cursor: pointer;
 }
+
+.button-off:hover {
+color: rgba(255, 255, 255, 0.6);
+}
+
+.button-off:focus,
+.button-on:focus {
+  color: rgba(255, 255, 255, 0.3);
+  }
 
 .catalog-container {
   display: flex;
@@ -769,17 +839,17 @@ img {
 }
 
 .show-tiles {
-  background-image: url("../images/catalog/tiles.svg");
+  background-image: url(../images/catalog/tiles.svg);
   background-repeat: no-repeat;
 }
 
 .show-tiles-big {
-  background-image: url("../images/catalog/tiles-big.svg");
+  background-image: url(../images/catalog/tiles-big.svg);
   background-repeat: no-repeat;
 }
 
 .show-list {
-  background-image: url("../images/catalog/list.svg");
+  background-image: url(../images/catalog/list.svg);
   background-repeat: no-repeat;
 }
 
@@ -856,6 +926,24 @@ img {
   border-radius: 4px;
 }
 
+.product-details:hover,
+.product-details:active {
+  background-color: #615048;
+}
+
+.product-details:focus,
+.to-favorites:focus
+.to-favorites.active:focus
+.button-off:focus {
+  color: rgba(225, 225, 225, 0.3);
+}
+
+.product-details:disabled,
+.to-favorites:disabled,
+.to-favorites.active:disabled {
+  background-color: #E5E5E5;
+}
+
 .to-favorites {
   display: flex;
   justify-content: center;
@@ -874,9 +962,19 @@ img {
   border-radius: 4px;
 }
 
+.to-favorites:hover,
+.to-favorites:active {
+  background-color: #68A2CA;
+}
+
+.to-favorites.active:hover {
+  background-color: #6C9E42;
+}
+
 .product-stars {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 
   gap: 6px;
 }
@@ -941,6 +1039,19 @@ img {
   background-color: #82b3d3;
   border-radius: 4px;
 }
+/*
+.pagination-link:hover:not(.pagination-link-more .pagination-link:first-child) {
+background-color: #68A2CA;
+} Почему не работает????*/
+
+
+.pagination-link:focus {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.pagination-link:focus-visible {
+  outline: 2px solid #000000;
+}
 
 .pagination-link-active {
   color: #000000;
@@ -994,6 +1105,14 @@ img {
   text-transform: uppercase;
   text-decoration: none;
 }
+
+.contacts-phone:focus {
+color: rgba(117, 97, 87, 1);
+}
+
+.contacts-phone:focus {
+  color: rgba(117, 97, 87, 0.3);
+  }
 
 /*Modal-container*/
 .modal-container {
