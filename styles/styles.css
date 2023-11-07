@@ -579,22 +579,43 @@ img {
 }
 
 .breadcrumbs {
+  display: flex;
   margin: 8px 0 40px;
   padding: 0;
 
   list-style-type: none;
   font-size: 16px;
   line-height: 21px;
+  gap: 10px;
+}
+
+.breadcrumbs-link-index {
+  background-image: url(../images/catalog/to-main-icon.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  align-self: center;
+}
+
+.breadcrumbs-arrow {
+  background-image: url(../images/catalog/arrow.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 8px;
+  height: 13px;
+  align-self: center;
 }
 
 .breadcrumbs-link {
   color: #ffffff;
   text-decoration: none;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
 .filter {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   font-weight: 400;
@@ -609,6 +630,18 @@ img {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+}
+
+.infrastructure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-right: 70px;
+  padding: 0;
+
+  border: none;
+
+  gap: 16px;
 }
 
 .infrastructure-input {
@@ -636,11 +669,11 @@ img {
   gap: 16px;
 }
 
-.infrastructure {
+.type-of-housing {
   display: flex;
   flex-direction: column;
   margin: 0;
-  margin-right: 70px;
+  margin-right: auto;
   padding: 0;
 
   border: none;
@@ -669,18 +702,6 @@ img {
   background-color: #3f5e72;
   border: 5px solid #ffffff;
   border-radius: 50%;
-}
-
-.type-of-housing {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  margin-right: auto;
-  padding: 0;
-
-  border: none;
-
-  gap: 16px;
 }
 
 .price {
@@ -729,12 +750,17 @@ img {
   border-radius: 0 4px 4px 0;
 }
 
+.price-slider-container {
+  margin-top: 44px;
+  position: relative;
+}
+
 .price-slider {
   display: inline-flex;
 
   background-color: rgba(225, 225, 225, 0.3);
-  background-position: center;
   width: 287px;
+  position: absolute;
   height: 4px;
 }
 
@@ -742,8 +768,32 @@ img {
   display: inline-flex;
 
   background-color: #ffffff;
-  background-position: center;
-  background-size: 228px 4px;
+  width: 226px;
+  height: 4px;
+  position: absolute;
+}
+
+.price-slider-min {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  top: -8px;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.price-slider-max {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  top: -8px;
+  right: 64px;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .filter-button {
