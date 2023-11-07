@@ -227,7 +227,7 @@ img {
   background-color: #615048;
 }
 
-.want-here:focus {
+.want-here:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -490,6 +490,15 @@ img {
   border-radius: 4px;
 }
 
+
+.search:hover {
+  background-color: #615048;
+}
+
+.search:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .subscribe {
   display: flex;
   flex-direction: column;
@@ -547,6 +556,15 @@ img {
   background-color: #82b3d3;
   border: none;
   border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.subscribe-get:hover {
+  background-color: #68a2ca;
+}
+
+.subscribe-get:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /*Catalog*/
@@ -596,6 +614,17 @@ img {
   width: 13px;
   height: 13px;
   align-self: center;
+  cursor: pointer;
+}
+
+.breadcrumbs-link-index:hover,
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link-index:active,
+.breadcrumbs-link:active {
+  opacity: 0.3;
 }
 
 .breadcrumbs-arrow {
@@ -660,6 +689,16 @@ img {
   background-image: url(../images/catalog/check-mark.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.infrastructure-input:hover,
+.housing-input:hover {
+  opacity: 0.6;
+}
+
+.infrastructure-input:active,
+.housing-input:active {
+  opacity: 0.3;
 }
 
 .infrastructure-option,
@@ -746,6 +785,13 @@ img {
   border-radius: 4px 0 0 4px;
 }
 
+.min-price:hover,
+.max-price:hover,
+.min-price:active,
+.max-price:active {
+  appearance: none;
+}                     /*НЕ работвет */
+
 .max-price {
   border-radius: 0 4px 4px 0;
 }
@@ -780,8 +826,13 @@ img {
   top: -8px;
   position: absolute;
   background-color: #ffffff;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+.price-slider-min:active ,
+.price-slider-max:active {
+  border: 2px solid #83B3D3;
 }
 
 .price-slider-max {
@@ -880,6 +931,9 @@ img {
 
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  background: url(../images/catalog/arrow-down.svg) no-repeat right 18px top 17px;
+  appearance: none;
+  cursor: pointer;
 }
 
 .show {
@@ -899,8 +953,14 @@ img {
 
   background-repeat: no-repeat;
   background-position: center;
-  border: 2px solid #000000;
+  border: 2px solid #E5E5E5;
   border-radius: 4px;
+}
+
+.show-button:hover,
+.show-button:active,
+.show-active {
+  border-color: #000000;
 }
 
 .show-tiles {
@@ -957,6 +1017,7 @@ img {
   text-decoration: none;
 
   grid-column: 1/-1;
+  cursor: pointer;
 }
 
 .product-type {
@@ -993,10 +1054,10 @@ img {
   background-color: #615048;
 }
 
-.product-details:focus,
-.to-favorites:focus
-.to-favorites.active:focus
-.button-off:focus {
+.product-details:active,
+.to-favorites:active,
+.to-favorites.active:active,
+.button-off:active {
   color: rgba(225, 225, 225, 0.3);
 }
 
@@ -1022,6 +1083,7 @@ img {
   background-color: #82b3d3;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .to-favorites:hover,
@@ -1101,13 +1163,13 @@ img {
   background-color: #82b3d3;
   border-radius: 4px;
 }
-/*
-.pagination-link:hover:not(.pagination-link-more .pagination-link:first-child) {
-background-color: #68A2CA;
-} Почему не работает????*/
+
+.pagination-link:hover {
+  background-color: #68A2CA;
+}
 
 
-.pagination-link:focus {
+.pagination-link:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1121,8 +1183,25 @@ background-color: #68A2CA;
   background-color: #f2f2f2;
 }
 
+.pagination-link-active:hover,
+.pagination-link-active:active {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
 .pagination-link-more {
   color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-decoration: none;
 
   background-color: #ffffff;
 }
@@ -1163,11 +1242,11 @@ background-color: #68A2CA;
 }
 
 .social-link:hover {
-  color: #83B3D3;
+  color: #68A2CA;
 }
 
-.social-link {
-  color: #83B3D3;
+.social-link:active {
+  color: rgba(104, 162, 202, 0.3);
 }
 
 .contacts-phone {
