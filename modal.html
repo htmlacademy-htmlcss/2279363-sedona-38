@@ -20,42 +20,44 @@
           action="https://echo.htmlacademy.ru/"
           method="post"
         >
-          <label class="date-arrival" for="date-arrival">Дата заезда:</label>
+          <label class="modal-submit date-arrival" for="date-arrival">Дата заезда:</label>
           <input
-            class="date-arrival-field"
+            class="modal-field date-arrival-field"
             placeholder="Укажите дату"
             type="date"
             name="date-arrival"
             id="date-arrival"
             required
           />
-          <label class="date-of-departure" for="date-of-departure">Дата выезда:</label>
+          <label class="modal-submit date-of-departure" for="date-of-departure">Дата выезда:</label>
           <input
-            class="date-of-departure-field"
+            class="modal-field date-of-departure-field"
             placeholder="Укажите дату"
             type="date"
             name="date-of-departure"
             id="date-of-departure"
             required
           />
-          <label class="adults" for="adults">Взрослые:</label>
+          <label class="modal-submit modal-submit-adults" for="adults">Взрослые:</label>
           <input
-            class="adults"
+            class="modal-field modal-field-adults"
             placeholder="2"
             type="number"
             name="adults"
             id="adults"
             required
           />
-          <label class="children" for="children">Дата заезда:</label>
+          <label class="modal-submit children" for="children">Дети:</label>
+          <div><span>i</span></div>
           <input
-            class="children"
+            class="modal-field modal-field-children"
             placeholder="2"
             type="number"
             name="children"
             id="children"
             required
           />
+          <button class="modal-search" type="submit">Найти</button>
       </div>
     </div>
   </body>
