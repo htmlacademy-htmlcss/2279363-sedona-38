@@ -274,56 +274,82 @@
       </footer>
     </div>
     <div class="modal-container">
-      <div class="modal modal-window">
+      <div class="modal">
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
         </section>
+
         <form action=""
           class="modal-form"
           action="https://echo.htmlacademy.ru/"
           method="post"
         >
           <label class="modal-submit date-arrival" for="date-arrival">Дата заезда:</label>
-          <input
-            class="modal-field date-arrival-field"
+          <div class="modal-field-container">
+            <input
+            class="modal-field modal-field-long"
             placeholder="Укажите дату"
-            type="date"
+            value="27 апреля 2020"
+            type="text"
             name="date-arrival"
             id="date-arrival"
             required
-          />
+            />
+            <p class="modal-massege modal-error">Мы не можем отправить вас в прошлое.</p>
+          </div>
           <label class="modal-submit date-of-departure" for="date-of-departure">Дата выезда:</label>
-          <input
-            class="modal-field date-of-departure-field"
+          <div class="modal-field-container">
+            <input
+            class="modal-field modal-field-long"
             placeholder="Укажите дату"
-            type="date"
+            value="1 сентября 2023"
+            type="text"
             name="date-of-departure"
             id="date-of-departure"
             required
-          />
+            />
+            <p class="modal-massege modal-free-dates">На эти даты есть свободные номера. Пока есть.</p>
+          </div>
+
           <label class="modal-submit" for="adults">Взрослые:</label>
-          <input
-            class="modal-field modal-field-adults"
-            placeholder="2"
-            type="number"
-            name="adults"
-            id="adults"
-            required
-          />
-          <label class="modal-submit" for="children">Дети:</label>
-          <div class="info"></div>
-          <input
-            class="modal-field modal-field-children"
-            placeholder="2"
-            type="number"
-            name="children"
-            id="children"
-            required
-          />
+          <div class="adults-quantity">
+            <button class="adults-button adults-button-less" type="button"><span class="minus"></span></button>
+            <input
+              class="modal-field modal-field-short"
+              placeholder="2"
+              type="number"
+              name="adults"
+              id="adults"
+              min="1"
+              max="99"
+              required
+            />
+            <button class="adults-button adults-button-more" type="button"><span class="plus"></span></button>
+          </div>
+
+          <label class="modal-submit modal-submit-children" for="children">Дети:</label>
+          <span class="tooltip">
+            <button class="tooltip-info">
+
+            </button>
+          </span>
+          <div class="children-quantity">
+            <button class="children-button children-button-less" type="button"></button>
+            <input
+              class="modal-field modal-field-short"
+              placeholder="2"
+              type="number"
+              name="children"
+              id="children"
+            />
+            <button class="children-button children-button-more" type="button"></button>
+          </div>
+          <p class="modal-children-popover">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
           <button class="modal-search" type="submit">Найти</button>
+        </form>
       </div>
     </div>
   </body>
