@@ -1340,6 +1340,7 @@ color: #000000;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: start;
 
 }
 
@@ -1348,6 +1349,7 @@ color: #000000;
   font-weight: 700;
   line-height: 24px;
   text-transform: capitalize;
+
 }
 
 .modal-field {
