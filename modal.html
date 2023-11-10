@@ -316,7 +316,7 @@
 
           <label class="modal-submit" for="adults">Взрослые:</label>
           <div class="adults-quantity">
-            <button class="adults-button adults-button-less" type="button"><span class="minus"></span></button>
+            <button class="button-quantity button-less" type="button"><div class="minus"></div></button>
             <input
               class="modal-field modal-field-short"
               placeholder="2"
@@ -327,18 +327,19 @@
               max="99"
               required
             />
-            <button class="adults-button adults-button-more" type="button"><span class="plus"></span></button>
+            <button class="button-quantity button-more" type="button"><div class="plus"></div></button>
           </div>
 
-          <div>
+          <div class="modal-submit-children-container">
             <label class="modal-submit modal-submit-children" for="children">Дети:</label>
-          <span class="tooltip">
-            <button class="tooltip-info">
-            </button>
-          </div>
-          </span>
+            <div class="tooltip">
+              <button class="tooltip-info">
+              </button>
+              <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+            </div>
+            </div>
           <div class="children-quantity">
-            <button class="children-button children-button-less" type="button"></button>
+            <button class="button-quantity button-less" type="button"></button>
             <input
               class="modal-field modal-field-short"
               placeholder="2"
@@ -346,9 +347,8 @@
               name="children"
               id="children"
             />
-            <button class="children-button children-button-more" type="button"></button>
+            <button class="button-quantity button-more" type="button"></button>
           </div>
-          <p class="modal-children-popover">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
           <button class="modal-search" type="submit">Найти</button>
         </form>
       </div>

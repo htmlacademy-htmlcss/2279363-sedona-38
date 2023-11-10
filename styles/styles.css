@@ -931,13 +931,15 @@ img {
   margin-right: 70px;
   padding: 14px 20px;
 
+  font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
 
-  border: 2px solid #e5e5e5;
+  border: 2px solid #e5e5e5; /*бордер мешает перфект пикселю как и в карточках*/
   border-radius: 4px;
   background: url(../images/catalog/arrow-down.svg) no-repeat right 18px top 17px;
+  background-position: center right 20px;
   appearance: none;
   cursor: pointer;
 }
@@ -1327,7 +1329,7 @@ img {
   height: 52px;
   background-color: #F2F2F2;
   border-radius: 50%;
-  background-image: url(../images/modal/cross.svg);
+  background-image: url(../images/modal/close.svg);
   background-repeat: no-repeat;
   background-position: center;
   border: none;
@@ -1354,6 +1356,9 @@ padding-right: 40px;
 }
 
 .modal-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-column: 1/2;
   font-size: 20px;
   font-weight: 700;
@@ -1379,16 +1384,17 @@ padding-right: 40px;
   background-color: #F2F2F2;
 
   border: none;
-  border-radius: 4px;
   appearance: none;
 }
 
 .modal-field-long {
   background-image: url(../images/modal/calendar.svg);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center right 20px;
   width: 440px;
   height: 48px;
+  padding: 12px 20px;
+  border-radius: 4px;
 }
 
 .modal-error {
@@ -1412,8 +1418,15 @@ padding-right: 40px;
   height: 48px;
 }
 
+.modal-submit-children-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
 .modal-submit-children {
   grid-column: 3/4;
+  margin-right: 10px;
 }
 
 .children-quantity {
@@ -1426,33 +1439,49 @@ padding-right: 40px;
 .modal-field-short {
   width: 31px;
   height: 48px;
-
 }
+/*
+.modal-field-short::placeholder {
+  text-align: center;
+} */
 
-.adults-button,
-.children-button {
-  display: flex;
+.button-quantity {
   width: 40px;
   height: 48px;
   background-color: #F2F2F2;
   border: none;
   cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
+  padding: 13px 10px;
 }
 
+.button-less {
+  border-radius: 4px 0 0 4px;
+}
+
+.button-more {
+  border-radius: 0 4px 4px 0;
+}
+
+
 .minus {
-  width: 12px;
-  border: 1px solid #000000;
+  border: 2px solid #000000;
+}
+
+.plus {
+  background-image: url(../images/modal/plus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 99999;
 }
 
 .tooltip-info {
-  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  display: block;
   background-color: #83B3D3;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border: none;
   font-weight: 400;
   font-size: 10px;
@@ -1461,14 +1490,29 @@ padding-right: 40px;
   background-image: url(../images/modal/info.svg);
   background-repeat: no-repeat;
   background-position: center;
+  margin-right: 46px;
 }
 
-.modal-children-popover {
+.tooltip {
+  position: relative;
+}
 
-  width: 256px;
+.tooltip-text {
   background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: none;
   border-radius: 10px;
-}
+  display: block;
+  width: 256px;
+  position: absolute;
+  top: 39px;
+  left: -117px;
+  padding: 15px 18px 18px 22px;
+  }
+
+
 
 .modal-search {
   grid-column: 1/-1;
@@ -1488,4 +1532,5 @@ padding-right: 40px;
   border: none;
   cursor: pointer;
   padding: 18px 77px;
+  margin-top: 48px;
 }
