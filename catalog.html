@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="styles/styles.css"/>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="/images/favicon/favicon.ico">
   </head>
 
   <body>
@@ -66,27 +67,30 @@
               <legend class="filter-title">Инфраструктура:</legend>
               <label class="infrastructure-option">
                 <input class="infrastructure-input" type="checkbox" name="infrastructure" value="swimming-pool" checked>
-                <span>Бассейн</span>
+                <span class="input-submit">Бассейн</span>
               </label>
               <label class="infrastructure-option">
                 <input class="infrastructure-input" type="checkbox" name="infrastructure" value="parking" checked>
-                <span>Парковка</span>
+                <span class="input-submit">Парковка</span>
               </label>
               <label class="infrastructure-option">
                 <input class="infrastructure-input" type="checkbox" name="infrastructure" value="wi-fi">
-                <span>Wi-Fi</span>
+                <span class="input-submit">Wi-Fi</span>
                 </label>
             </fieldset>
             <fieldset class="type-of-housing">
               <legend class="filter-title">Тип Жилья:</legend>
               <label class="housing-option">
-                <input class="housing-input" type="radio" name="type-of-housing" value="hotel" checked>Гостиница
+                <input class="housing-input" type="radio" name="type-of-housing" value="hotel" checked>
+                <span class="input-submit">Гостиница</span>
               </label>
               <label  class="housing-option">
-                <input class="housing-input" type="radio" name="type-of-housing" value="motel">Мотель
+                <input class="housing-input" type="radio" name="type-of-housing" value="motel">
+                <span class="input-submit">Мотель</span>
               </label>
               <label  class="housing-option">
-                <input class="housing-input" type="radio" name="type-of-housing" value="apartments">Апартаменты
+                <input class="housing-input" type="radio" name="type-of-housing" value="apartments">
+                <span class="input-submit">Апартаменты</span>
               </label>
             </fieldset>
             <fieldset class="price">
@@ -255,6 +259,8 @@
                 height="14"
                 viewBox="0 0 24 14"
                 fill="currentColor"
+                role="img"
+                aria-label="Вконтакте"
               >
                 <path
                   fill-rule="evenodd"
@@ -266,13 +272,15 @@
           </li>
           <li>
             <a class="social-link" href="#">
-              <span class="visually-hidden">Телеграмм.</span>
+              <span class="visually-hidden">Telegram.</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
                 height="16"
                 viewBox="0 0 18 16"
                 fill="currentColor"
+                role="img"
+                aria-label="Telegram"
               >
                 <path
                   d="M16.785 0.0992597L0.840489 6.24776C-0.247661 6.68481 -0.241365 7.29184 0.640845 7.56253L4.73445 8.83953L14.2058 2.8637C14.6537 2.59121 15.0629 2.7378 14.7265 3.03636L7.05283 9.96185H7.05103L7.05283 9.96275L6.77045 14.1823C7.18413 14.1823 7.36669 13.9925 7.59871 13.7686L9.58705 11.8351L13.7229 14.89C14.4855 15.31 15.0332 15.0941 15.2229 14.1841L17.9379 1.38885C18.2158 0.274623 17.5126 -0.229883 16.785 0.0992597Z"
@@ -289,6 +297,8 @@
                 height="17"
                 viewBox="0 0 22 17"
                 fill="currentColor"
+                role="img"
+                aria-label="YouTube"
               >
                 <path
                   d="M18.607 0H3.17413C1.31343 0 0 1.59375 0 3.4V13.4937C0 15.4062 1.31343 17 3.17413 17H18.8259C20.4677 17 22 15.4062 22 13.6V3.4C21.7811 1.59375 20.4677 0 18.607 0ZM7.66169 12.5375V4.4625L14.995 8.5L7.66169 12.5375Z"
@@ -299,7 +309,7 @@
         </ul>
         <h2 class="visually-hidden">Контакты.</h2>
         <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <h2 class="visually-hidden">Логотип html-academy.</h2>
+        <h2 class="visually-hidden">html-academy.</h2>
         <a class="logo-html-academy" href="https://htmlacademy.ru">
           <svg
           width="115"
@@ -307,6 +317,8 @@
           viewBox="0 0 115 33"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
+          role="img"
+          aria-label="html-academy"
         >
           <g clip-path="url(#clip0_33719_526)">
             <path
