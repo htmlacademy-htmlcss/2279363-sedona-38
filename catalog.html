@@ -8,11 +8,6 @@
   </head>
 
   <body>
-    <!-- perfect-pixel start -->
-    <picture>
-      <img class="perfect-pixel" src="images/page-catalog.png"/>
-    </picture>
-    <!-- perfect-pixel end -->
     <div class="page-container">
       <header class="header" data-test="header">
         <nav class="navigation">
@@ -57,12 +52,11 @@
         <div class="catalog-main-header">
           <h1 class="catalog-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
-            <li class="breadcrumbs-link-index">
-              <a href="index.html"
+            <li class="breadcrumbs-link-index-wrapper">
+              <a class="breadcrumbs-link-index" href="index.html"
                 ><span class="visually-hidden">Главная</span></a
               >
             </li>
-            <li><div class="breadcrumbs-arrow"></div></li>
             <li>
               <a class="breadcrumbs-link" href="#">Гостиницы</a>
             </li>
@@ -164,8 +158,8 @@
               <div class="price-slider-container">
                 <div class="price-slider"></div>
                 <div class="price-slider-moving"></div>
-                <div class="price-slider-min"></div>
-                <div class="price-slider-max"></div>
+                <button class="price-slider-min" type="button"></button>
+                <button class="price-slider-max" type="button"></button>
               </div>
             </fieldset>
             <div class="filter-button">
@@ -198,7 +192,7 @@
           <section data-test="catalog">
             <ul class="product-list">
               <li class="product-card">
-                <a href="#">
+                <a class="product-link-image" href="#">
                   <img
                     class="product-image"
                     src="images/catalog/housing/amara-resort&spa.jpg"
@@ -207,7 +201,7 @@
                     alt="Amara Resort & Spa"
                   />
                 </a>
-                <a class="product-link">
+                <a class="product-link" href="#">
                   <h3 class="product-title">Amara Resort & Spa</h3>
                 </a>
                 <p class="product-type">Гостиница</p>
@@ -220,10 +214,10 @@
                   <span class="star"></span>
                   <span class="star"></span>
                 </div>
-                <p class="rating">Рейтинг:&nbsp;<span>8,5</span></p>
+                <p class="rating">Рейтинг:<span class="rating-quantity">8,5</span></p>
               </li>
               <li class="product-card">
-                <a href="#">
+                <a class="product-link-image" href="#">
                   <img
                     class="product-image"
                     src="images/catalog/housing/villas-at-poco-diablo.jpg"
@@ -232,7 +226,7 @@
                     alt="Villas at Poco Diablo"
                   />
                 </a>
-                <a class="product-link">
+                <a class="product-link" href="#">
                   <h3 class="product-title">Villas at Poco Diablo</h3>
                 </a>
                 <p class="product-type">Гостиница</p>
@@ -247,10 +241,10 @@
                   <span class="star"></span>
                   <span class="star"></span>
                 </div>
-                <p class="rating">Рейтинг:&nbsp;<span>9,2</span></p>
+                <p class="rating">Рейтинг:<span class="rating-quantity">9,2</span></p>
               </li>
               <li class="product-card">
-                <a href="#">
+                <a class="product-link-image" href="#">
                   <img
                     class="product-image"
                     src="images/catalog/housing/desert-quail-inn.jpg"
@@ -259,7 +253,7 @@
                     alt="Desert Quail Inn"
                   />
                 </a>
-                <a class="product-link">
+                <a class="product-link" href="#">
                   <h3 class="product-title">Desert Quail Inn</h3>
                 </a>
                 <p class="product-type">Гостиница</p>
@@ -271,10 +265,10 @@
                   <span class="star"></span>
                   <span class="star"></span>
                 </div>
-                <p class="rating">Рейтинг:&nbsp;<span>6,9</span></p>
+                <p class="rating">Рейтинг:<span class="rating-quantity">6,9</span></p>
               </li>
               <li class="product-card">
-                <a href="#">
+                <a class="product-link-image" href="#">
                   <img
                     class="product-image"
                     src="images/catalog/housing/greentree-inn.jpg"
@@ -283,7 +277,7 @@
                     alt="GreenTree Inn"
                   />
                 </a>
-                <a class="product-link">
+                <a class="product-link" href="#">
                   <h3 class="product-title">GreenTree Inn</h3>
                 </a>
                 <p class="product-type">Гостиница</p>
@@ -294,7 +288,7 @@
                   <span class="star"></span>
                   <span class="star"></span>
                 </div>
-                <p class="rating">Рейтинг:&nbsp;<span>5,0</span></p>
+                <p class="rating">Рейтинг:<span class="rating-quantity">5,0</span></p>
               </li>
             </ul>
           </section>
