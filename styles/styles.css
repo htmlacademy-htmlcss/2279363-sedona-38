@@ -1474,6 +1474,7 @@ body {
   background-repeat: no-repeat;
   background-position: center right 20px;
   border-radius: 4px;
+  -webkit-transition: background-color 0.3s;
 }
 
 .modal-error {
@@ -1524,10 +1525,6 @@ body {
   height: 48px;
 }
 
-/* .modal-field-short::placeholder {
-  Поставить по центру
-} */
-
 .button-quantity {
   width: 40px;
   height: 48px;
@@ -1547,20 +1544,16 @@ body {
 }
 
 
-/* .minus {
-  Вставить минус картинкой
-} */
+.minus {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
 
 .plus {
   display: block;
   width: 14px;
   height: 14px;
-
-  opacity: 0.2;
-
-  background: url(../images/modal/plus.svg);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .tooltip-info {
