@@ -17,7 +17,7 @@
   src: url(../fonts/ptsans-700.woff2) format("woff2");
 }
 
-* {
+*, *::after, *::before {
   box-sizing: border-box;
 }
 
@@ -79,9 +79,6 @@ body {
 
   clip: rect(0 0 0 0);
 }
-img {
-  vertical-align: top;
-}
 
 /*Header*/
 .header {
@@ -122,6 +119,7 @@ img {
   align-items: center;
   margin: 0 auto 0 0;
   padding: 0;
+  max-width: 620px;
 }
 
 .navigation-list,
@@ -677,6 +675,7 @@ img {
   flex-direction: column;
   margin: 0 71px 0 0;
   padding: 0;
+  max-width: 150px;
 
   border: none;
 
@@ -736,6 +735,7 @@ img {
   flex-direction: column;
   margin: 0 auto 0 0;
   padding: 0;
+  max-width: 150px;
 
   border: none;
 
