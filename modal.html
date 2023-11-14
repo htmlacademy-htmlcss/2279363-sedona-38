@@ -291,7 +291,7 @@
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
         </section>
 
-        <form action=""
+        <form
           class="modal-form"
           action="https://echo.htmlacademy.ru/"
           method="post"
@@ -306,7 +306,7 @@
             name="date-arrival"
             id="date-arrival"
             required
-            />
+            >
             <p class="modal-massege modal-error">Мы не можем отправить вас в прошлое.</p>
           </div>
           <label class="modal-submit date-of-departure" for="date-of-departure">Дата выезда:</label>
@@ -319,13 +319,13 @@
             name="date-of-departure"
             id="date-of-departure"
             required
-            />
+            >
             <p class="modal-massege modal-free-dates">На эти даты есть свободные номера. Пока есть.</p>
           </div>
 
           <label class="modal-submit" for="adults">Взрослые:</label>
           <div class="adults-quantity">
-            <button class="button-quantity button-less" type="button"><div class="minus"></div></button>
+            <button class="button-quantity button-less" type="button"><span class="minus"></span></button>
             <input
               class="modal-field modal-field-short"
               placeholder="2"
@@ -335,28 +335,28 @@
               min="1"
               max="99"
               required
-            />
-            <button class="button-quantity button-more" type="button"><div class="plus"></div></button>
+            >
+            <button class="button-quantity button-more" type="button"><span class="plus"></span></button>
           </div>
 
           <div class="modal-submit-children-container">
             <label class="modal-submit modal-submit-children" for="children">Дети:</label>
             <div class="tooltip">
               <button class="tooltip-info">
-              </button aria-labelledby="tooltip-label-children">
+              <button aria-labelledby="tooltip-label-children">
               <span class="tooltip-text" role="tooltip" id="tooltip-label-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
             </div>
             </div>
           <div class="children-quantity">
-            <button class="button-quantity button-less" type="button"><div class="minus"></button>
+            <button class="button-quantity button-less" type="button"><span class="minus"></span></button>
             <input
               class="modal-field modal-field-short"
               placeholder="2"
               type="number"
               name="children"
               id="children"
-            />
-            <button class="button-quantity button-more" type="button"><div class="plus"></div></button>
+            >
+            <button class="button-quantity button-more" type="button"><span class="plus"></span></button>
           </div>
           <button class="modal-search" type="submit">Найти</button>
         </form>
