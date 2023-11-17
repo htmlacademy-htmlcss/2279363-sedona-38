@@ -1702,7 +1702,6 @@ body {
   grid-column: 2/-1;
 }
 
-
 .modal-field {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1914,7 +1913,6 @@ body {
   background-color: #333;
   border-radius: 10px;
 }
-
 
 .tooltip-text::before {
   content: "";
