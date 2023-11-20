@@ -1814,12 +1814,12 @@ body {
   height: 48px;
 }
 
-.modal-field-short::-webkit-outer-spin-button {
+.modal-field-short[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   appearance: none;
 }
 
-.modal-field-short::-webkit-inner-spin-button {
+.modal-field-short[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   appearance: none;
 }
