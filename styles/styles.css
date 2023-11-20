@@ -1054,7 +1054,7 @@ body {
 }
 
 .button-off {
-  background-color: #82b3d3;
+  background-color: rgba(131, 179, 211, 0);
 }
 
 .button-off:hover {
